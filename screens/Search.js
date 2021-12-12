@@ -56,13 +56,13 @@ const Search = ({navigation}) => {
         )}
         {searchResults && searchResults.length == 0 && (
           <View>
-            <Text>No results matching your criteria</Text>
-            <Text>Try different keywords</Text>
+            <Text>No results matching your criteria.</Text>
+            <Text>Try different keywords.</Text>
           </View>
         )}
         {!searchResults && (
           <View>
-            <Text>Type something to start searching</Text>
+            <Text>Type something to start searching.</Text>
           </View>
         )}
         {error && <Error />}
