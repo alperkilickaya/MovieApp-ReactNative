@@ -43,6 +43,7 @@ const Search = ({navigation}) => {
           <Icon name={'search-outline'} color={'#000'} size={35} />
         </TouchableOpacity>
       </View>
+
       <View style={styles.searchItems}>
         {searchResults && searchResults.length > 0 && (
           <FlatList
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
   },
   container: {
     padding: 10,
-    paddingTop: 40,
+    paddingTop: 10,
     flexDirection: 'row',
     alignItems: 'center',
   },

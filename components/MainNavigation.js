@@ -1,7 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import Detail from '../screens/Detail';
-import Navbar from '../components/Navigation';
+import Navbar from '../components/Navbar';
 import Home from '../screens/Home';
 import Search from '../screens/Search';
 

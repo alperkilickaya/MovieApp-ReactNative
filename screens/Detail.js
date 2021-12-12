@@ -8,7 +8,6 @@ import {
   Dimensions,
   ActivityIndicator,
   Modal,
-  Pressable,
 } from 'react-native';
 import StarRating from 'react-native-star-rating';
 import {getMovie} from '../services/services';
