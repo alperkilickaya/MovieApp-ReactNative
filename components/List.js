@@ -11,6 +11,9 @@ const propTypes = {
 const List = props => {
   const {navigation, title, content} = props;
 
+  const movie = ({item}) => <Card navigation={navigation} item={item} />;
+  const key_extractor = item => item.id;
+
   return (
     <View style={styles.list}>
       <View>
@@ -18,8 +21,9 @@ const List = props => {
       </View>
       <View>
         <FlatList
+          keyExtractor={key_extractor}
           data={content}
-          renderItem={({item}) => <Card navigation={navigation} item={item} />}
+          renderItem={movie}
           horizontal={true}></FlatList>
       </View>
     </View>
