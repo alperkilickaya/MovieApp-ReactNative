@@ -21,6 +21,7 @@ const dimensions = Dimensions.get('screen');
 
 const Home = ({navigation}) => {
   const [moviesImages, setMoviesImages] = useState([]);
+  const [moviesIDs, setMoviesIDs] = useState([]);
   const [popularMovies, setPopularMovies] = useState([]);
   const [popularTv, setPopularTv] = useState([]);
   const [familyMovies, setFamilyMovies] = useState([]);
@@ -50,12 +51,17 @@ const Home = ({navigation}) => {
           documantaryMoviesData,
         ]) => {
           const moviesImagesArray = [];
+          const moviesIDArray = [];
+          //console.log(upcomingMoviesData);
           upcomingMoviesData.forEach(movie => {
+            console.log(movie);
             moviesImagesArray.push(
               'https://image.tmdb.org/t/p/w500' + movie.poster_path,
             );
+            moviesIDArray.push(movie.id);
           });
           setMoviesImages(moviesImagesArray);
+          setMoviesIDs(moviesIDArray);
           setPopularMovies(popularMoviesData);
           setPopularTv(popularTvData);
           setFamilyMovies(familyMoviesData);
@@ -114,6 +120,7 @@ const Home = ({navigation}) => {
     // });
   }, []);
 
+  console.log(moviesIDs);
   return (
     <>
       {loaded && !error && (
@@ -127,6 +134,9 @@ const Home = ({navigation}) => {
                 circleLoop={true}
                 dotStyle={styles.sliderStyle}
                 resizeMode="contain"
+                onCurrentImagePressed={index =>
+                  navigation.navigate('Detail', {movieID: moviesIDs[index]})
+                }
               />
             </View>
           )}

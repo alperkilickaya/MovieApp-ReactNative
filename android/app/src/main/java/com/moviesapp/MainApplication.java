@@ -1,4 +1,4 @@
-package com.moviesappalperalper;
+package com.moviesappalper;
 
 import android.app.Application;
 import android.content.Context;

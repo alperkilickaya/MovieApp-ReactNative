@@ -1,4 +1,4 @@
-package com.moviesappalperalper;
+package com.moviesappalper;
 
 import com.facebook.react.ReactActivity;
 

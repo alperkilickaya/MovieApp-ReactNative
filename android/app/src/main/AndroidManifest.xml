@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.moviesappalperalper">
+  package="com.moviesappalper">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
