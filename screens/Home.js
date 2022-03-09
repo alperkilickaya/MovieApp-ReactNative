@@ -120,7 +120,6 @@ const Home = ({navigation}) => {
     // });
   }, []);
 
-  console.log(moviesIDs);
   return (
     <>
       {loaded && !error && (
